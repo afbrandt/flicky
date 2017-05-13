@@ -10,7 +10,7 @@ import UIKit
 
 let FEED_CELL_IDENTIFIER = "FeedCollectionViewCell"
 
-class FeedViewController: UICollectionViewController {
+class FeedViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var feedItems: [FlickerFeedItem] = []
 
@@ -32,6 +32,12 @@ class FeedViewController: UICollectionViewController {
         }
     }
     
+    //MARK: - UICollectionViewDelegate method
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
+    }
+    
     //MARK: - UICollectionViewDataSource methods
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -45,6 +51,15 @@ class FeedViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FEED_CELL_IDENTIFIER, for: indexPath)
         return cell
+    }
+    
+    //MARK: - UICollectionViewDelegateFlowLayout method
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = collectionView.frame.width
+        let height = collectionView.frame.height
+        
+        return CGSize(width: width, height: height)
     }
 }
 
