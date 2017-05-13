@@ -50,6 +50,8 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FEED_CELL_IDENTIFIER, for: indexPath)
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 1.0
         return cell
     }
     
@@ -57,9 +59,8 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width
-        let height = collectionView.frame.height
         
-        return CGSize(width: width, height: height)
+        return CGSize(width: width/2, height: width/2)
     }
 }
 
