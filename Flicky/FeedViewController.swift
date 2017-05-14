@@ -28,7 +28,6 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
             
             self.feedItems = feed.items
             self.collectionView?.reloadData()
-            print(feed.items.count)
         }
     }
     
@@ -64,8 +63,9 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width
+        let height = collectionView.frame.height
         
-        return CGSize(width: width/2, height: width/2)
+        return CGSize(width: width, height: height/2)
     }
 }
 

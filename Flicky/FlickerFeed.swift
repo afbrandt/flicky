@@ -31,7 +31,7 @@ struct FlickerFeedItem {
     let imageUrl: FlickerMedia
 //    let published: Date
 //    let dateTaken: Date
-//    let tags: String
+    let tags: String
     let title: String
 }
 
@@ -40,6 +40,7 @@ extension FlickerFeedItem: Unboxable {
         self.author = try unboxer.unbox(key :"author")
         self.title = try unboxer.unbox(key: "title")
         self.imageUrl = try unboxer.unbox(key: "media")
+        self.tags = try unboxer.unbox(key: "tags")
     }
 }
 
