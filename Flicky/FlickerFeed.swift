@@ -28,15 +28,27 @@ struct FlickerFeedItem {
 //    let authorId: String
 //    let description: String
 //    let link: String
-//    let imageUrl: String
+    let imageUrl: FlickerMedia
 //    let published: Date
 //    let dateTaken: Date
 //    let tags: String
-//    let title: String
+    let title: String
 }
 
 extension FlickerFeedItem: Unboxable {
     init(unboxer: Unboxer) throws {
         self.author = try unboxer.unbox(key :"author")
+        self.title = try unboxer.unbox(key: "title")
+        self.imageUrl = try unboxer.unbox(key: "media")
+    }
+}
+
+struct FlickerMedia {
+    let url: String
+}
+
+extension FlickerMedia: Unboxable {
+    init(unboxer: Unboxer) throws {
+        self.url = try unboxer.unbox(key: "m")
     }
 }

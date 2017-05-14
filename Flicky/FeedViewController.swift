@@ -50,6 +50,11 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FEED_CELL_IDENTIFIER, for: indexPath)
+        if let feedCell = cell as? FeedCollectionViewCell {
+            let feedItem = self.feedItems[indexPath.row]
+            feedCell.titleLabel.text = feedItem.title
+            feedCell.fetchImage(with: feedItem.imageUrl.url)
+        }
         cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.borderWidth = 1.0
         return cell

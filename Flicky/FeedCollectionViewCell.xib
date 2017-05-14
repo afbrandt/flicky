@@ -14,9 +14,37 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="209" height="186"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="meX-iV-lR5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xh4-oi-Ums">
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1w-mg-wal">
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
             </view>
             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="S1w-mg-wal" secondAttribute="trailing" constant="5" id="3kM-y2-gz1"/>
+                <constraint firstItem="S1w-mg-wal" firstAttribute="centerY" secondItem="Xh4-oi-Ums" secondAttribute="centerY" id="BT9-jr-9xA"/>
+                <constraint firstItem="meX-iV-lR5" firstAttribute="centerY" secondItem="Aub-OY-5cQ" secondAttribute="centerY" id="Ic0-2m-kKs"/>
+                <constraint firstItem="meX-iV-lR5" firstAttribute="width" secondItem="Aub-OY-5cQ" secondAttribute="width" id="JkH-Ki-n7g"/>
+                <constraint firstItem="meX-iV-lR5" firstAttribute="centerX" secondItem="Aub-OY-5cQ" secondAttribute="centerX" id="L7q-Jd-qGe"/>
+                <constraint firstAttribute="bottom" secondItem="Xh4-oi-Ums" secondAttribute="bottom" constant="5" id="Nzi-ao-Llt"/>
+                <constraint firstItem="Xh4-oi-Ums" firstAttribute="leading" secondItem="Aub-OY-5cQ" secondAttribute="leading" constant="5" id="ZiX-pu-FZb"/>
+                <constraint firstItem="meX-iV-lR5" firstAttribute="height" secondItem="Aub-OY-5cQ" secondAttribute="height" id="p6j-Dx-fEg"/>
+            </constraints>
             <size key="customSize" width="209" height="186"/>
+            <connections>
+                <outlet property="dimensionsLabel" destination="S1w-mg-wal" id="f1t-tE-3fi"/>
+                <outlet property="imageView" destination="meX-iV-lR5" id="90b-aw-mSr"/>
+                <outlet property="titleLabel" destination="Xh4-oi-Ums" id="xEC-qV-yZX"/>
+            </connections>
             <point key="canvasLocation" x="17.5" y="44"/>
         </collectionViewCell>
     </objects>
