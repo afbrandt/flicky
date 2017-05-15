@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+
 
 class FeedDetailCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -54,7 +54,7 @@ class FeedDetailCollectionViewController: UICollectionViewController, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FEED_CELL_IDENTIFIER, for: indexPath)
         if let feedCell = cell as? FeedCollectionViewCell, let feedItem = self.item {
             feedCell.titleLabel.text = feedItem.title
-            feedCell.fetchImage(with: feedItem.imageUrl.url)
+            feedCell.fetchImage(with: feedItem.imageUrl.url, showDimensions: false)
         }
         cell.layer.borderColor = UIColor.white.cgColor
         cell.layer.borderWidth = 1.0
@@ -69,35 +69,5 @@ class FeedDetailCollectionViewController: UICollectionViewController, UICollecti
         
         return CGSize(width: width, height: height/2)
     }
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }
