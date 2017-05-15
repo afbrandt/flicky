@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37246C1017D9C8473C8C41FD /* Pods_FlickyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD5446883283CDAB5FCFFB /* Pods_FlickyTests.framework */; };
+		4923207C1EC9251300BC784B /* FeedDetailCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4923207B1EC9251300BC784B /* FeedDetailCollectionViewController.swift */; };
 		49507D9F1EC7724A005FF3C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49507D9E1EC7724A005FF3C2 /* AppDelegate.swift */; };
 		49507DA11EC7724A005FF3C2 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49507DA01EC7724A005FF3C2 /* FeedViewController.swift */; };
 		49507DA41EC7724A005FF3C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49507DA21EC7724A005FF3C2 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		179E0D071DFC1BEFBE607267 /* Pods-Flicky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flicky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flicky/Pods-Flicky.debug.xcconfig"; sourceTree = "<group>"; };
 		3DFC4134CF787A7177D8A2EA /* Pods_Flicky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flicky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E3D37342E449313B4222686 /* Pods-FlickyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlickyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlickyTests/Pods-FlickyTests.release.xcconfig"; sourceTree = "<group>"; };
+		4923207B1EC9251300BC784B /* FeedDetailCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedDetailCollectionViewController.swift; sourceTree = "<group>"; };
 		49507D9B1EC7724A005FF3C2 /* Flicky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flicky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49507D9E1EC7724A005FF3C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49507DA01EC7724A005FF3C2 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4923207D1EC9252700BC784B /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				49507DA01EC7724A005FF3C2 /* FeedViewController.swift */,
+				4923207B1EC9251300BC784B /* FeedDetailCollectionViewController.swift */,
+				4923207E1EC9267000BC784B /* Cells */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
+		4923207E1EC9267000BC784B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				49F023841EC7C1F7006B4730 /* FeedCollectionViewCell.swift */,
+				49F023861EC7C387006B4730 /* FeedCollectionViewCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		49507D921EC7724A005FF3C2 = {
 			isa = PBXGroup;
 			children = (
@@ -111,11 +132,9 @@
 				49507D9E1EC7724A005FF3C2 /* AppDelegate.swift */,
 				49F023801EC778E8006B4730 /* FlickerService.swift */,
 				49F023821EC7836E006B4730 /* FlickerFeed.swift */,
-				49507DA01EC7724A005FF3C2 /* FeedViewController.swift */,
-				49F023841EC7C1F7006B4730 /* FeedCollectionViewCell.swift */,
-				49F023861EC7C387006B4730 /* FeedCollectionViewCell.xib */,
-				49507DA21EC7724A005FF3C2 /* Main.storyboard */,
+				4923207D1EC9252700BC784B /* Feed */,
 				49507DA51EC7724A005FF3C2 /* Assets.xcassets */,
+				49507DA21EC7724A005FF3C2 /* Main.storyboard */,
 				49507DA71EC7724A005FF3C2 /* LaunchScreen.storyboard */,
 				49507DAA1EC7724A005FF3C2 /* Info.plist */,
 			);
@@ -348,6 +367,7 @@
 				49F023851EC7C1F7006B4730 /* FeedCollectionViewCell.swift in Sources */,
 				49507DA11EC7724A005FF3C2 /* FeedViewController.swift in Sources */,
 				49507D9F1EC7724A005FF3C2 /* AppDelegate.swift in Sources */,
+				4923207C1EC9251300BC784B /* FeedDetailCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

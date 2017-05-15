@@ -31,10 +31,16 @@ class FeedViewController: UICollectionViewController, UICollectionViewDelegateFl
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail", let item = sender as? FlickerFeedItem, let vc = segue.destination as? FeedDetailCollectionViewController {
+            vc.item = item
+        }
+    }
+    
     //MARK: - UICollectionViewDelegate method
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        self.performSegue(withIdentifier: "toDetail", sender: self.feedItems[indexPath.row])
     }
     
     //MARK: - UICollectionViewDataSource methods

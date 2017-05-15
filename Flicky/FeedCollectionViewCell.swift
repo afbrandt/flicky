@@ -26,7 +26,7 @@ class FeedCollectionViewCell: UICollectionViewCell {
         
         if let url = URL(string: url) {
             self.imageView.af_setImage(withURL: url, completion:{ (response: DataResponse<UIImage>) in
-                if let image = response.value {
+                if let image = response.value { //Calculate image size
                     let size = image.size
                     let scale = UIScreen.main.scale
                     self.dimensionsLabel.isHidden = false

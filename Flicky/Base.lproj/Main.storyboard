@@ -6,11 +6,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Feed View Controller-->
+        <!--Flicky-->
         <scene sceneID="PWo-eT-5CW">
             <objects>
                 <collectionViewController id="n3L-Vb-q5t" customClass="FeedViewController" customModule="Flicky" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dty-7u-ujB">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="dty-7u-ujB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,18 +26,46 @@
                             <outlet property="delegate" destination="n3L-Vb-q5t" id="4ZH-sc-T2b"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="skC-w0-TOB"/>
+                    <navigationItem key="navigationItem" title="Flicky" id="skC-w0-TOB"/>
+                    <connections>
+                        <segue destination="clh-DU-4DL" kind="show" identifier="toDetail" id="3pb-AQ-B29"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVR-vU-gTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1719.2" y="231.63418290854574"/>
         </scene>
-        <!--Flicky-->
+        <!--Feed Detail Collection View Controller-->
+        <scene sceneID="haw-dN-lgQ">
+            <objects>
+                <collectionViewController id="clh-DU-4DL" customClass="FeedDetailCollectionViewController" customModule="Flicky" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="a2A-JG-rk7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qzB-l6-oUS">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="clh-DU-4DL" id="9G9-MZ-xud"/>
+                            <outlet property="delegate" destination="clh-DU-4DL" id="UOs-HC-kgw"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sjg-V9-LHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705" y="232"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="sNy-br-MdT">
             <objects>
-                <navigationController title="Flicky" automaticallyAdjustsScrollViewInsets="NO" id="dds-AJ-Jp0" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dds-AJ-Jp0" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EIc-aH-cPG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" barStyle="black" id="EIc-aH-cPG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
